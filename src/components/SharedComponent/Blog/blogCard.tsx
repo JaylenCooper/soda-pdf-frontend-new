@@ -15,7 +15,7 @@ const BlogCard = ({ blog }: { blog: Blog }) => {
                         alt="image"
                         width={300}
                         height={250}
-                        className="group-hover:scale-110 duration-300"
+                        className="group-hover:scale-110 duration-200"
                     />
                 </div>
                 <div className="">

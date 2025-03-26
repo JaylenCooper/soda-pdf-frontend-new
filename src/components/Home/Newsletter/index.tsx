@@ -1,8 +1,34 @@
 "use client"
 import Image from "next/image";
 import { Icon } from "@iconify/react";
+import { motion, AnimatePresence } from "framer-motion";
+import { useState } from "react";
 
 const Newsletter = () => {
+    const [email, setEmail] = useState("");
+    const [isValid, setIsValid] = useState(true);
+    const [isTouched, setIsTouched] = useState(false);
+
+    const validateEmail = (email: string) => {
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return emailRegex.test(email);
+    };
+
+    const handleEmailChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+        const newEmail = e.target.value;
+        setEmail(newEmail);
+        setIsValid(validateEmail(newEmail));
+        setIsTouched(true);
+    };
+
+    const handleSubmit = (e: React.FormEvent) => {
+        e.preventDefault();
+        if (validateEmail(email)) {
+            // Handle form submission here
+            console.log("Valid email submitted:", email);
+        }
+    };
+
     return (
         <section className='relative'>
             <div className="container mx-auto lg:max-w-screen-xl md:max-w-screen-md ">
@@ -14,21 +40,49 @@ const Newsletter = () => {
                                 Subscribe our <br /> newsletter.
                             </h2>
 
-                            <div>
+                            <form onSubmit={handleSubmit}>
                                 <div className="relative text-white focus-within:text-white flex flex-row-reverse shadow-fi rounded-full">
-                                    <input type="Email address" name="q" className="py-6 sm:py-8 text-sm w-full text-black dark:text-white rounded-full pl-4 par-87 focus:outline-none focus:text-black" placeholder="@ enter your email-address" autoComplete="off" />
+                                    <input 
+                                        type="email"
+                                        value={email}
+                                        onChange={handleEmailChange}
+                                        onBlur={() => setIsTouched(true)}
+                                        className={`py-6 sm:py-8 text-sm w-full text-black dark:text-white rounded-full pl-4 par-87 focus:outline-none focus:text-black ${
+                                            isTouched && !isValid ? 'border-2 border-red-500' : ''
+                                        }`}
+                                        placeholder="@ enter your email-address"
+                                        autoComplete="off"
+                                    />
                                     <div className="absolute inset-y-0 right-0 flex items-center pr-2">
-                                        <button type="submit" className="p-2 bg-gray-900 hover:scale-110 duration-300 rounded-full">
+                                        <button 
+                                            type="submit"
+                                            className={`p-2 rounded-full transition-all duration-200 ${
+                                                isValid ? 'bg-gray-900 hover:scale-110' : 'bg-red-500 cursor-not-allowed'
+                                            }`}
+                                            disabled={!isValid}
+                                        >
                                             <Icon
                                                 icon="tabler:arrow-narrow-right"
                                                 width="32"
                                                 height="32"
-                                                className="text-white "
+                                                className="text-white"
                                             />
                                         </button>
                                     </div>
                                 </div>
-                            </div>
+                                <AnimatePresence>
+                                    {isTouched && !isValid && (
+                                        <motion.div
+                                            initial={{ opacity: 0, y: -10 }}
+                                            animate={{ opacity: 1, y: 0 }}
+                                            exit={{ opacity: 0, y: -10 }}
+                                            className="text-white text-sm mt-2 ml-4"
+                                        >
+                                            Please enter a valid email address
+                                        </motion.div>
+                                    )}
+                                </AnimatePresence>
+                            </form>
                         </div>
                     </div>
                     <div className="col-span-5 relative hidden md:block">

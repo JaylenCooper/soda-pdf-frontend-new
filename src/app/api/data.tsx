@@ -165,11 +165,11 @@ export const FeaturesDataAdvanced: {
         color: '#52b173',
       },
       {
-        icon: RiToolsFill,
+        icon: GrResources,
         imgSrc: '/images/Features/featureOne.svg',
-        heading: "",
-        subheading: "",
-        color: '#52b173',
+        heading: "See more",
+        subheading: "Click here to see more PDF tools & services",
+        color: '#b15273',
       }
   
     ]

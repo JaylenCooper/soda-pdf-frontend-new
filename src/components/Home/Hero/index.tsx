@@ -15,8 +15,8 @@ const Hero = () => {
                     </h1>
                         <p className='text-black/55 dark:text-white/50 lg:text-lg font-normal mb-10 lg:text-start text-center'>Make managing your PDFs effortless. Edit, merge, convert, compress, sign, and secure your documents—everything you need is just a few clicks away.</p>
                         <div className='md:flex align-middle justify-center lg:justify-start'>
-                            <Link href='#cook-section' className='flex border w-full md:w-auto mt-5 md:mt-0 border-primary justify-center rounded-full text-xl font-medium items-center py-5 px-10 text-white bg-primary hover:text-primary hover:bg-transparent'>EXPLORE</Link>
-                            <Link href='#about-section' className='flex border lg:ml-5 w-full md:w-auto mt-5 md:mt-0 border-primary justify-center rounded-full text-xl font-medium items-center py-5 px-10 text-primary hover:text-white hover:bg-primary'>BUY NOW</Link>
+                            <Link href='#cook-section' className='flex border w-full md:w-auto mt-5 md:mt-0 border-primary justify-center rounded-full text-xl font-medium items-center py-5 px-10 text-white bg-primary hover:text-primary hover:bg-transparent transition-all duration-200 ease-linear hover:scale-105 active:scale-95'>EXPLORE</Link>
+                            <Link href='#about-section' className='flex border lg:ml-5 w-full md:w-auto mt-5 md:mt-0 border-primary justify-center rounded-full text-xl font-medium items-center py-5 px-10 text-primary hover:text-white hover:bg-primary transition-all duration-200 ease-linear hover:scale-105 active:scale-95'>BUY NOW</Link>
                         </div>
                     </div>
                     <div className='col-span-6 flex justify-center relative'>

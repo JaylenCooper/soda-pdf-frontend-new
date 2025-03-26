@@ -71,7 +71,7 @@ const Header: React.FC = () => {
 
   return (
     <header
-      className={`fixed top-0 z-40 w-full transition-all duration-300 ${sticky ? " shadow-lg bg-white dark:bg-gray-600 py-4" : "shadow-none py-8"
+      className={`fixed top-0 z-40 w-full transition-all duration-200 ${sticky ? " shadow-lg bg-white dark:bg-gray-600 py-4" : "shadow-none py-8"
         }`}
     >
       <div className="lg:py-0 py-2">
@@ -83,7 +83,7 @@ const Header: React.FC = () => {
             ))}
           </nav>
           <div className="flex items-center gap-4">
-            <Link href="#" className="text-lg font-medium hover:text-primary">
+            <Link href="#" className="text-lg font-medium hover:text-primary transition-colors duration-200 ease-linear">
               <Icon
                 icon="solar:phone-bold"
                 className="text-primary text-3xl inline-block me-2"
@@ -92,7 +92,7 @@ const Header: React.FC = () => {
             </Link>
             <Link
               href="#"
-              className="hidden lg:block text-primary bg-primary/15 hover:text-white hover:bg-primary font-medium text-lg py-4 px-8 rounded-full"
+              className="hidden lg:block text-primary bg-primary/15 hover:text-white hover:bg-primary hover:scale-105 active:scale-95 font-medium text-lg py-4 px-8 rounded-full transition-all duration-200 ease-linear"
               onClick={() => {
                 setIsSignInOpen(true);
               }}
@@ -121,7 +121,7 @@ const Header: React.FC = () => {
             )}
             <Link
               href="#"
-              className="hidden lg:block bg-primary text-white hover:bg-primary/15 hover:text-primary font-medium text-lg py-4 px-8 rounded-full "
+              className="hidden lg:block bg-primary text-white hover:bg-primary/15 hover:text-primary hover:scale-105 active:scale-95 font-medium text-lg py-4 px-8 rounded-full transition-all duration-200 ease-linear"
               onClick={() => {
                 setIsSignUpOpen(true);
               }}
@@ -153,9 +153,9 @@ const Header: React.FC = () => {
               className="block lg:hidden p-2 rounded-lg"
               aria-label="Toggle mobile menu"
             >
-              <span className="block w-6 h-0.5 bg-white"></span>
-              <span className="block w-6 h-0.5 bg-white mt-1.5"></span>
-              <span className="block w-6 h-0.5 bg-white mt-1.5"></span>
+              <span className="block w-6 h-0.5 bg-primary"></span>
+              <span className="block w-6 h-0.5 bg-primary mt-1"></span>
+              <span className="block w-6 h-0.5 bg-primary mt-1"></span>
             </button>
           </div>
         </div>
@@ -164,7 +164,7 @@ const Header: React.FC = () => {
         )}
         <div
           ref={mobileMenuRef}
-          className={`lg:hidden fixed top-0 right-0 h-full w-full bg-darkmode shadow-lg transform transition-transform duration-300 max-w-xs ${navbarOpen ? "translate-x-0" : "translate-x-full"
+          className={`lg:hidden fixed top-0 right-0 h-full w-full bg-darkmode bg-white shadow-lg transform transition-transform duration-200 max-w-xs ${navbarOpen ? "translate-x-0" : "translate-x-full"
             } z-50`}
         >
           <div className="flex items-center justify-between p-4">
@@ -186,7 +186,7 @@ const Header: React.FC = () => {
             <div className="mt-4 flex flex-col space-y-4 w-full">
               <Link
                 href="#"
-                className="bg-transparent border border-primary text-primary px-4 py-2 rounded-lg hover:bg-blue-600 hover:text-white"
+                className="bg-transparent border border-primary text-primary px-4 py-2 rounded-lg hover:bg-primary hover:text-white hover:scale-105 active:scale-95 transition-all duration-200 ease-linear"
                 onClick={() => {
                   setIsSignInOpen(true);
                   setNavbarOpen(false);
@@ -196,7 +196,7 @@ const Header: React.FC = () => {
               </Link>
               <Link
                 href="#"
-                className="bg-primary text-white px-4 py-2 rounded-lg hover:bg-blue-700"
+                className="bg-primary text-white px-4 py-2 rounded-lg hover:bg-blue-700 hover:scale-105 active:scale-95 transition-all duration-200 ease-linear"
                 onClick={() => {
                   setIsSignUpOpen(true);
                   setNavbarOpen(false);

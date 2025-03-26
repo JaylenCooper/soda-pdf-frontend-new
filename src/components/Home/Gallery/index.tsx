@@ -38,8 +38,8 @@ const Gallery = () => {
                                         <p className='text-white text-2xl'>
                                             <span className='font-semibold'>Members:</span> {item.member}
                                         </p>
-                                        <Link href="#" className='text-white rounded-full bg-primary border border-primary py-2 px-6 hover:bg-primary/40 hover:backdrop-blur-sm'>
-                                            Learn More
+                                        <Link href="#" className='text-white rounded-full bg-primary border border-primary py-2 px-6 hover:bg-primary/40 hover:backdrop-blur-sm transition-all duration-300 hover:scale-105 active:scale-95'>
+                                            See More
                                         </Link>
                                     </div>
                                 </div>
