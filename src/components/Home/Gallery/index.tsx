@@ -36,7 +36,7 @@ const Gallery = () => {
                                     </p>
                                     <div className="flex items-center justify-between w-full">
                                         <p className='text-white text-2xl'>
-                                            <span className='font-semibold'>Price:</span> ${item.price}
+                                            <span className='font-semibold'>Members:</span> {item.member}
                                         </p>
                                         <Link href="#" className='text-white rounded-full bg-primary border border-primary py-2 px-6 hover:bg-primary/40 hover:backdrop-blur-sm'>
                                             Learn More

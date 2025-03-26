@@ -180,40 +180,40 @@ export const ExpertData: {
 }[] = [
     {
       profession: 'Senior',
-      name: 'Shoo Thar Mien',
+      name: 'John Pappas',
       imgSrc: '/images/Expert/boyone.png',
     },
     {
       profession: 'Junior',
-      name: 'Shoo Thar Mien',
+      name: 'Alexandra Stewart',
       imgSrc: '/images/Expert/girl.png',
     },
     {
       profession: 'Junior',
-      name: 'Shoo Thar Mien',
+      name: 'Harry Bennit',
       imgSrc: '/images/Expert/boytwo.png',
     },
     {
-      profession: 'Junior',
-      name: 'Shoo Thar Mien',
-      imgSrc: '/images/Expert/girl.png',
-    },
-    {
       profession: 'Senior',
-      name: 'Shoo Thar Mien',
+      name: 'John Pappas',
       imgSrc: '/images/Expert/boyone.png',
     },
     {
       profession: 'Junior',
-      name: 'Shoo Thar Mien',
+      name: 'Alexandra Stewart',
+      imgSrc: '/images/Expert/girl.png',
+    },
+    {
+      profession: 'Junior',
+      name: 'Harry Bennit',
       imgSrc: '/images/Expert/boytwo.png',
     },
   ]
 
 // data.tsx
 export const galleryImages = [
-  { src: '/images/Gallery/foodone.jpg', name: 'Caesar', price: 35 },
-  { src: '/images/Gallery/foodtwo.jpg', name: 'Christmas', price: 17 },
-  { src: '/images/Gallery/foodthree.jpg', name: 'Sauteed', price: 45 },
-  { src: '/images/Gallery/foodfour.jpg', name: 'BBQ', price: 27 },
+  { src: '/images/Gallery/foodone.jpg', name: 'Group 1', member: 35 },
+  { src: '/images/Gallery/foodtwo.jpg', name: 'Group 2', member: 17 },
+  { src: '/images/Gallery/foodthree.jpg', name: 'Group 3', member: 45 },
+  { src: '/images/Gallery/foodfour.jpg', name: 'Group 4', member: 27 },
 ];

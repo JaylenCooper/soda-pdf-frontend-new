@@ -53,7 +53,7 @@ const Expert = () => {
                             <div className='m-3 py-14 my-10 text-center'>
                                 <div className="relative">
                                     <Image src={items.imgSrc} alt="gaby" width={362} height={262} className="inline-block m-auto" />
-                                    <div className="absolute top-[50%] right-[2%]">
+                                    <div className="absolute top-[70%] right-[-10%]">
                                         <Image src={'/images/Expert/Linkedin.svg'} alt="linkedin" width={220} height={120} />
                                     </div>
                                 </div>

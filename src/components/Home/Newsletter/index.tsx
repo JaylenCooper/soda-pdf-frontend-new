@@ -36,7 +36,7 @@ const Newsletter = () => {
                             <Image src={'/images/Newsletter/soup.png'} alt="soup-image" width={400} height={400} className='-mt-24' />
                         </div>
                         <div className="absolute top-[78%]">
-                            <Image src={'/images/Newsletter/onion.svg'} alt="onion-image" width={300} height={122} />
+                            {/* <Image src={'/images/Newsletter/onion.svg'} alt="onion-image" width={300} height={122} /> */}
                         </div>
                         <div className="absolute top-[30%] right-[-23%] hidden lg:block">
                             <Image src={'/images/Newsletter/lec.png'} alt="lettuce-image" width={300} height={122} />
