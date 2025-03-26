@@ -25,7 +25,7 @@ const viewEdit = [
 ];
 
 const signSecure = [
-  { label: "Electronic Signature", href: "#" },
+  { label: "E-Signature", href: "#" },
   { label: "Protect PDF", href: "#" },
   { label: "Unlock PDF", href: "#" },
 ];
@@ -37,11 +37,11 @@ const managePDFFiles = [
 ];
 
 const datas = [
-  { title: "Convert from PDF", links: convertFromPdf },
-  { title: "Convert to PDF", links: convertToPdf },
+  { title: "From PDF", links: convertFromPdf },
+  { title: "To PDF", links: convertToPdf },
   { title: "View & Edit", links: viewEdit },
   { title: "Sign & Secure", links: signSecure },
-  { title: "Manage PDF Files", links: managePDFFiles },
+  { title: "Manage PDFs", links: managePDFFiles },
   { title: "More", links: headerData },
 ];
 
